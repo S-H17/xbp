@@ -51,3 +51,10 @@ span.blackback{
     background: #393939;
     color: #efefef;
 }
+
+body{
+    background-image: url(./20221004_133036115_iOS.jpg);
+    background-size: 300px; 
+}
+
+
