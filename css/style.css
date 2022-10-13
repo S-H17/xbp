@@ -17,8 +17,6 @@ logotohome img{
     height: 70px;
     object-fit: cover; /* 画像のトリミング */
 }
-body{background-image: url(../images/20221004_133036115_iOS.jpg);
-    background-size: cover;}
 
 
 /* ========== common ========== */
