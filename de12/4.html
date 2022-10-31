@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <title>ハヤト　第4回</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <h1>2022/10/28</h1> 
+   <h2>★脱出ゲーム★</h2>
+　　　私たちの班はストーリー形式の脱出ゲームをつくることにしました。
+   <h2>ストーリーボード</h2>
+<img src="./images/20221031_014540795_iOS.png"width=40%>
+   <h2>ソースコード</h2>
+   <code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">from os import name</li>
+    <li style="background-color:#EEF;">from re import A</li>
+    <li style="background-color:#EFF;">from select import select</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">name=input("あなたのお名前は？")</li>
+    <li style="background-color:#EEF;">while(True):</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print("あなたは横浜の大学に通う1年生。3007でデザイン演習を受けていた。"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"授業中に眠ってしまい起きたら夜の10時。"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"学校は既に閉まっており扉は開かない。"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"幸いにも閉じ込められていたのはもう一人いた。一緒に協力して脱出しよう！！")</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;select=int(input("脱出する為に選択肢1~3を選んでね!"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"1.教室を見渡す"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2.電気を付ける"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"3.ドアを無理矢理開ける"))</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if select==1:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("正解　次の選択肢に進んでね")</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==2:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("意味ないよ　はじめからやり直し")</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==3:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("警報が作動したよ　はじめからやり直し")</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EFF;">while(True):</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;select=int(input("道用先生のパソコンがあったよ。"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"「ミッション！ パソコンのパスワードを解除し出口の扉を解除せよ！」"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"パスワードの選択肢1~3を選んでね!"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"1.1129（誕生日）"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2.3062（昨日の食材費）"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"3.1949（神奈川大学の創立年）"))</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if select==2:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("正解　次の選択肢に進んでね")</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==1:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("入力制限がかかったよ　はじめからやり直し")</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==3:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("入力制限がかかったよ　はじめからやり直し")</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EEF;">while(True):</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;select=int(input("扉が開いたよ。"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"さぁどこへ行く？"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"行くところの選択肢1~3を選んでね!"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"1.1階へ降りる"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2.7階へ昇る"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"3.21階へ昇る"))</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;if select==2:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("正解　次の選択肢に進んでね")</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==1:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("どの扉も開かない　はじめからやり直し")</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==3:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("外への出口がない　はじめからやり直し")</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EFF;">while(True):</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;select=int(input("7階のテラスへ出ることができた。"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"最後の問題だよ。"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"一緒に脱出している子からヘリを呼ぼうと言われた。"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ただし、電話をかけるのはあなた。"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"さぁ、どこへかける？"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"1.消防署にかける"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"2.大富豪にかける"</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"3.警察署にかける"))</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if select==2:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("正解")</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==1:</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("不正解　ゲームオーバー")</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;elif select==3:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("不正解　ゲームオーバー")</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue</li>
+    <li style="background-color:#EEF;">while(True):</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;select=int(input("ヘリで脱出成功。"</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"ゲームクリア。お疲れ様"))</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+    </ol></code>
+   <h2>まとめ・感想</h2>
+　　　内容は至って簡単なのにストーリーを考えたり、コードでエラーが起こった際にやり直したりと普段からやっていない事に取り組んだので<br>
+　　とても苦労した。私たちが普段やっているゲームには到底追いつけないと感じた。<br>
+　　今回は授業中に習わなかったwholeとcontinueを使って間違えたら戻るという処理を利用して思い通りのゲームを作ることができた。<br>
+　　ファブラボで道用先生に教えてもらわなかったら理想通りにならなかった気がする。
+　　間違えたらやり直しの処理はリストを使っても同じような事ができると知ったのでやってみたいと思う。
+   <h2>備考・授業のまとめ</h2>
+   <code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">#ageという変数に44を代入している</li>
+    <li style="background-color:#EEF;">age=44</li>
+    <li style="background-color:#EFF;"></li>
+    </ol></code><br>
+
+    <code>
+        <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+        <li style="background-color:#EFF;">if waist&gt;=85:      #数字の後ろにコロンを入れてEnterを押しTabでずらしてからprintと入れる事が大切</li>
+        </ol></code><br>
+
+    <code>
+         <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+         <li style="background-color:#EFF;">if waist&gt;=85 and age&gt;=40:#この部分が変更  #論理記号を用いて条件付けしていく</li>
+         </ol></code><br>
+
+         <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">for i in range(1,4): #コロンが入っていることに注意</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print(i,"人目") #タブでずらしていることに注意！</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;"># 出力結果</li>
+            <li style="background-color:#EFF;"># 0 人目</li>
+            <li style="background-color:#EEF;"># 1 人目</li>
+            <li style="background-color:#EFF;"># 2 人目</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">name=input("名前を教えて下さい")</li>
+            <li style="background-color:#EEF;">waist=float(input("腹囲は？"))</li>
+            <li style="background-color:#EFF;">age=int(input("年齢は？"))</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">print(name, "さんは腹囲", waist, "cmで年齢は",age, "才ですね。")</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">if waist&gt;=85 and age&gt;=40:#この部分が変更  #論理記号を用いて条件付けしていく</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(name,"さん、内臓脂肪蓄積注意です")</li>
+            <li style="background-color:#EEF;">else:</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;print(name,"さん、腹囲は問題ありません")</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;</li>
+            <li style="background-color:#EFF;">#整数に変換したい場合-----------&gt; int()</li>
+            <li style="background-color:#EEF;">#小数点もある数に変換したい場合---&gt; float()を使うとエラーにならなくなる</li>
+            </ol></code>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+         <a href="./index.html">デザイン演習Ⅰ・Ⅱトップページ</a><br>
+         <a href="../index.html">XBPトップページ</a><br>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
