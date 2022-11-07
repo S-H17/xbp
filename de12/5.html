@@ -1,0 +1,88 @@
+    <!DOCTYPE html>
+    <html lang="jp">
+    <head>
+    <title>ハヤト　第5回</title>
+    <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <h1>可能性と模索</h1>
+<h2>グループワーク</h2>
+私たちの班は睡眠に焦点をあて時間になったら自動でプレイリストの音楽をかけて眠れるようにならないかと考えました。
+日中眠くならないようにするために睡眠の効率をあげることが目的です。
+
+<h2>ストーリーボード</h2>
+
+<h2>ソースコード</h2>
+<code>
+    <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+    <li style="background-color:#EFF;">import pygame.mixer</li>
+    <li style="background-color:#EEF;">import schedule</li>
+    <li style="background-color:#EFF;">import time</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">#アラーム処理</li>
+    <li style="background-color:#EFF;">def Alarm():</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;print("時間です")</li>
+    <li style="background-color:#EFF;">#   print("\007")  #ビープ音</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;Sound()</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;exit()   #これがないと無限ループになるので注意</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">#音再生処理</li>
+    <li style="background-color:#EEF;">def Sound():</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.init() #初期化</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.load('alerm1.mp3') #読み込み</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.play(-1) #ループ再生（引数を1にすると1回のみ再生）</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;input()</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pygame.mixer.music.stop() #終了</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">#目覚まし設定時間取得</li>
+    <li style="background-color:#EFF;">print("目覚ましをセットする時間を指定してください")</li>
+    <li style="background-color:#EEF;">hour = input("時間（hour）")</li>
+    <li style="background-color:#EFF;">minute = input("分（minute）")</li>
+    <li style="background-color:#EEF;">target = f"{hour.zfill(2)}:{minute.zfill(2)}"</li>
+    <li style="background-color:#EFF;">print(target+"にアラームをセットしました")</li>
+    <li style="background-color:#EEF;"></li>
+    <li style="background-color:#EFF;">#アラーム時間設定</li>
+    <li style="background-color:#EEF;">schedule.every().day.at(target).do(Alarm)</li>
+    <li style="background-color:#EFF;"></li>
+    <li style="background-color:#EEF;">#アラーム待ち</li>
+    <li style="background-color:#EFF;">while True:</li>
+    <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;schedule.run_pending()</li>
+    <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;time.sleep(1)</li>
+    </ol></code>
+    これは時間になったらアラームがなるコードで音楽をかけることは出来ません。<br>
+    調べてコードを貼ってもうまくいかなかったのでこれより先は出来たグループのコードを貼ることにします。
+
+    <h2>できた人</h2>
+<a href="https://moeno39.github.io/xbp/de12/5.html">本多さんのリンク</a>
+</a>
+    <h2>参照</h2>
+<a href="https://qiita.com/Rxxx/items/d1f7d9a08dacf693b0a9">アラーム</a>
+<a href="https://magazine.techacademy.jp/magazine/21129">処理を定期実行</a>
+<a href="https://di-acc2.com/programming/python/4574/">スケジュールモジュール</a>
+<a href="https://life-table.com/python-task-scheduler/">タスクスケジューラ</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="./index.html">デザイン演習Ⅰ・Ⅱトップページ</a><br>
+<a href="../index.html">XBPトップページ</a><br>
+</body>
+</html>
