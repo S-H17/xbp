@@ -1,0 +1,79 @@
+    <!DOCTYPE html>
+    <html lang="jp">
+    <head>
+    <title>第4回</title>
+    <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <h1>第4回 5/8</h1>
+        <iframe width="401" height="713" src="https://www.youtube.com/embed/58M0RzwgeTg" title="LED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div>今回はLEDの方にちからをいれて取り組みました。以下がchatGTPも利用して作ったArduinoのコードである。</div>
+        <div>上と下のLEDをpixelsに、真ん中のLEDをpixel2として動きを分けた。また、動画越しだと分かりにくいが色が徐々にずれて変わっている事にも注目してほしい</div>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">#include &lt;Adafruit_NeoPixel.h&gt;</li>
+            <li style="background-color:#EEF;">#define PIN 6 // 信号用のピンを指定</li>
+            <li style="background-color:#EFF;">#define PIN2 10 // 信号用のピンを指定</li>
+            <li style="background-color:#EEF;">#define NUMPIXELS 5 // LEDの数を指定</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);</li>
+            <li style="background-color:#EFF;">Adafruit_NeoPixel pixel2(NUMPIXELS, PIN2, NEO_GRB + NEO_KHZ800);</li>
+            <li style="background-color:#EEF;">#define DELAYVAL 100</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">int step_num = 0;</li>
+            <li style="background-color:#EFF;">int delta = 1;</li>
+            <li style="background-color:#EEF;">int color1[] = {255, 0, 0};  // 色1: 赤</li>
+            <li style="background-color:#EFF;">int color2[] = {0, 255, 0};  // 色2: 緑</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">void setup() {</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;pixels.begin();</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;pixel2.begin();</li>
+            <li style="background-color:#EEF;">}</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">void loop() {</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;pixels.clear();</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;for (int i = 0; i &lt; pixels.numPixels(); i++) {</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;int pixelHue = step_num + (i * 65536L / pixels.numPixels());</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;pixels.setPixelColor(i, pixels.gamma32(pixels.ColorHSV(pixelHue)));</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;}</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;pixels.show();</li>
+            <li style="background-color:#EFF;"></li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;pixel2.clear();</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;for (int i = 0; i &lt; pixel2.numPixels(); i++) {</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;int pixelHue = step_num + (i * 65536L / pixel2.numPixels());</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;pixel2.setPixelColor(i, pixel2.gamma32(pixel2.ColorHSV(pixelHue)));</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;}</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;pixel2.show();</li>
+            <li style="background-color:#EEF;"></li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;step_num += 256;</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;if (step_num == 65536) {</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;step_num = 0;</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;}</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;// 色を切り替える条件を設定</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;if (step_num % 512 == 0) {</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;// 色1と色2を交互に切り替える</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;if (delta == 1) {</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 色1を設定</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixels.setBrightness(5);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixels.setPixelColor(0, pixels.Color(color1[250], color1[50], color1[20]));</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixel2.setBrightness(100);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixel2.setPixelColor(0, pixel2.Color(color1[0], color1[1], color1[2]));</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;} else {</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 色2を設定</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixels.setBrightness(100);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixels.setPixelColor(0, pixels.Color(color2[0], color2[1], color2[2]));</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixel2.setBrightness(5);</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixel2.setPixelColor(0, pixel2.Color(color2[0], color2[1], color2[2]));</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;&nbsp;&nbsp;}</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;&nbsp;&nbsp;delta *= -1; // deltaの値を反転して交互に切り替える</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;}</li>
+            <li style="background-color:#EEF;">&nbsp;&nbsp;</li>
+            <li style="background-color:#EFF;">&nbsp;&nbsp;delay(DELAYVAL);</li>
+            <li style="background-color:#EEF;">}</li>
+            <li style="background-color:#EFF;"></li>
+            </ol></code>
+
+ <br>    
+</body>
+</html>
