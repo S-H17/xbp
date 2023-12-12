@@ -100,7 +100,7 @@ h1,
 .header-area{
     position: fixed;
     left:50%;
-    top:46%;
+    top:60%;
     transform: translate(-50%,-50%);
     z-index: 2;
     color: #fd90a9;
@@ -170,6 +170,15 @@ h1,
 }
 #g-nav-list li:nth-of-type(7){
     animation-delay: 1.3s;
+}
+#g-nav-list li:nth-of-type(8){
+    animation-delay: 1.5s;
+}
+#g-nav-list li:nth-of-type(9){
+    animation-delay: 1.7s;
+}
+#g-nav-list li:nth-of-type(10){
+    animation-delay: 1.9s;
 }
 /* lead */
 

@@ -5,30 +5,30 @@
  */
 
 /* # =================================================================
-   # Global selectors
+   # Global Selector
    # ================================================================= */
 
    html {
     box-sizing: border-box;
-    overflow-y: scroll; /* All browsers without overlaying scrollbars */
+    overflow-y: scroll; /* スクロールバーをオーバーレイしないすべてのブラウザ */
     -webkit-text-size-adjust: 100%; /* iOS 8+ */
   }
   
   *,
   ::before,
   ::after {
-    background-repeat: no-repeat; /* Set `background-repeat: no-repeat` to all elements and pseudo elements */
+    background-repeat: no-repeat; /* すべての要素と擬似要素に `background-repeat: no-repeat` を設定する。 */
     box-sizing: inherit;
   }
   
   ::before,
   ::after {
-    text-decoration: inherit; /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+    text-decoration: inherit; /* text-decorationとvertical-alignを::beforeと::after疑似要素に継承する。 */
     vertical-align: inherit;
   }
   
   * {
-    padding: 0; /* Reset `padding` and `margin` of all elements */
+    padding: 0; /* すべての要素の `padding` と `margin` をリセットする。 */
     margin: 0;
   }
   
@@ -43,14 +43,14 @@
   }
   
   hr {
-    overflow: visible; /* Show the overflow in Edge and IE */
+    overflow: visible; /* EdgeとIEでオーバーフローを表示する */
   }
   
   /*
-  * Correct `block` display not defined for any HTML5 element in IE 8/9
-  * Correct `block` display not defined for `details` or `summary` in IE 10/11
-  * and Firefox
-  * Correct `block` display not defined for `main` in IE 11
+  * IE 8/9 の HTML5 要素で定義されていない `block` 表示を修正しました。
+  * IE 10/11 で `details` または `summary` が定義されていない `block` 表示を修正した。
+  * および Firefox
+  * IE 11 の `main` で定義されていない `block` 表示を修正しました。
   */
   article,
   aside,
@@ -68,50 +68,50 @@
   }
   
   summary {
-    display: list-item; /* Add the correct display in all browsers */
+    display: list-item; /* すべてのブラウザで正しい表示を追加する */
   }
   
   small {
-    font-size: 80%; /* Set font-size to 80% in `small` elements */
+    font-size: 80%; /* small`要素のfont-sizeを80%に設定する。 */
   }
   
   [hidden],
   template {
-    display: none; /* Add the correct display in IE */
+    display: none; /* IEに正しい表示を追加する */
   }
   
   abbr[title] {
-    border-bottom: 1px dotted; /* Add a bordered underline effect in all browsers */
-    text-decoration: none; /* Remove text decoration in Firefox 40+ */
+    border-bottom: 1px dotted; /* すべてのブラウザーでボーダーの下線効果を追加する */
+    text-decoration: none; /* Firefox 40+でテキスト装飾を削除する */
   }
   
   a {
-    background-color: transparent; /* Remove the gray background on active links in IE 10 */
-    -webkit-text-decoration-skip: objects; /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+    background-color: transparent; /* IE 10でアクティブなリンクの灰色の背景を削除する */
+    -webkit-text-decoration-skip: objects; /* iOS 8+とSafari 8+のリンクのアンダーラインのギャップを取り除く */
   }
   
   a:active,
   a:hover {
-    outline-width: 0; /* Remove the outline when hovering in all browsers */
+    outline-width: 0; /* すべてのブラウザでカーソルを合わせたときのアウトラインを取り除く */
   }
   
   code,
   kbd,
   pre,
   samp {
-    font-family: monospace, monospace; /* Specify the font family of code elements */
+    font-family: monospace, monospace; /* コード要素のフォントファミリーを指定する*/
   }
   
   b,
   strong {
-    font-weight: bolder; /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+    font-weight: bolder; /* Edge 12+、Safari 6.2+、Chrome 18+で、スタイルを「太字」に設定する。 */
   }
   
   dfn {
-    font-style: italic; /* Address styling not present in Safari and Chrome */
+    font-style: italic; /* SafariとChromeでアドレススタイルが表示されない */
   }
   
-  /* Address styling not present in IE 8/9 */
+  /* IE 8/9でアドレススタイルが表示されない */
   mark {
     background-color: #ff0;
     color: #000;
@@ -142,7 +142,7 @@
     border-radius: 0;
   }
   
-  /* Apply cursor pointer to button elements */
+  /* ボタン要素にカーソルポインタを適用する */
   button,
   [type="button"],
   [type="reset"],
@@ -151,7 +151,7 @@
     cursor: pointer;
   }
   
-  /* Replace pointer cursor in disabled elements */
+  /* 無効化された要素のポインタ・カーソルを置き換える */
   [disabled] {
     cursor: default;
   }
@@ -171,7 +171,7 @@
   
   textarea {
     overflow: auto; /* Internet Explorer 11+ */
-    resize: vertical; /* Specify textarea resizability */
+    resize: vertical; /* textareaのサイズ変更の指定 */
   }
   
   button,
@@ -179,18 +179,18 @@
   optgroup,
   select,
   textarea {
-    font: inherit; /* Specify font inheritance of form elements */
+    font: inherit; /*フォーム要素のフォント継承を指定する */
   }
   
   optgroup {
-    font-weight: bold; /* Restore the font weight unset by the previous rule. */
+    font-weight: bold; /* 前のルールで設定されていないフォントのウェイトを元に戻す。 */
   }
   
   button {
-    overflow: visible; /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+    overflow: visible; /* IE 8/9/10/11で`overflow`アドレスが`hidden`に設定されている。 */
   }
   
-  /* Remove inner padding and border in Firefox 4+ */
+  /*Firefox 4+で内側のパディングとボーダーを削除する */
   button::-moz-focus-inner,
   [type="button"]::-moz-focus-inner,
   [type="reset"]::-moz-focus-inner,
@@ -199,7 +199,7 @@
     padding: 0;
   }
   
-  /* Replace focus style removed in the border reset above */
+  /* 上記のボーダーリセットで削除されたフォーカススタイルを置き換える */
   button:-moz-focusring,
   [type="button"]::-moz-focus-inner,
   [type="reset"]::-moz-focus-inner,
@@ -208,10 +208,10 @@
   }
   
   button,
-  html [type="button"], /* Prevent a WebKit bug where (2) destroys native `audio` and `video`controls in Android 4 */
+  html [type="button"], /* Android 4 で、(2) がネイティブの `audio` と `video` コントロールを破壊する WebKit のバグを防ぐ。 */
   [type="reset"],
   [type="submit"] {
-    -webkit-appearance: button; /* Correct the inability to style clickable types in iOS */
+    -webkit-appearance: button; /* iOSでクリッカブル・タイプのスタイル設定ができない問題を修正 */
   }
   
   button,
@@ -219,7 +219,7 @@
     text-transform: none; /* Firefox 40+, Internet Explorer 11- */
   }
   
-  /* Remove the default button styling in all browsers */
+  /* すべてのブラウザでデフォルトのボタンスタイルを削除する */
   button,
   input,
   select,
@@ -229,7 +229,7 @@
     color: inherit;
   }
   
-  /* Style select like a standard input */
+  /* 標準入力のようなスタイル選択 */
   select {
     -moz-appearance: none; /* Firefox 36+ */
     -webkit-appearance: none; /* Chrome 41+ */
@@ -244,21 +244,21 @@
   }
   
   legend {
-    border: 0; /* Correct `color` not being inherited in IE 8/9/10/11 */
-    color: inherit; /* Correct the color inheritance from `fieldset` elements in IE */
-    display: table; /* Correct the text wrapping in Edge and IE */
-    max-width: 100%; /* Correct the text wrapping in Edge and IE */
-    white-space: normal; /* Correct the text wrapping in Edge and IE */
+    border: 0; /* IE 8/9/10/11 で `color` が継承されない問題を修正 */
+    color: inherit; /*IEにおける`fieldset`要素の色継承を修正。 */
+    display: table; /* EdgeとIEでテキストの折り返しを修正する */
+    max-width: 100%; /* EdgeとIEでテキストの折り返しを修正する */
+    white-space: normal; /* EdgeとIEでテキストの折り返しを修正する */
   }
   
   ::-webkit-file-upload-button {
-    -webkit-appearance: button; /* Correct the inability to style clickable types in iOS and Safari */
-    font: inherit; /* Change font properties to `inherit` in Chrome and Safari */
+    -webkit-appearance: button; /* iOSとSafariでクリッカブル・タイプのスタイル設定ができない問題を修正。 */
+    font: inherit; /* ChromeとSafariでフォントのプロパティを「継承」に変更する */
   }
   
   [type="search"] {
-    -webkit-appearance: textfield; /* Correct the odd appearance in Chrome and Safari */
-    outline-offset: -2px; /* Correct the outline style in Safari */
+    -webkit-appearance: textfield; /* ChromeとSafariで奇妙な外観を修正する */
+    outline-offset: -2px; /* Safariのアウトラインスタイルを修正 */
   }
   
   /* # =================================================================
@@ -266,10 +266,10 @@
      # ================================================================= */
   
   img {
-    border-style: none; /* Remove border when inside `a` element in IE 8/9/10 */
+    border-style: none; /* IE 8/9/10 で `a` 要素内にあるボーダーを削除する */
   }
   
-  /* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+  /* Chrome、Firefox、Operaで正しい垂直アライメントを追加する */
   progress {
     vertical-align: baseline;
   }
@@ -289,7 +289,7 @@
      # Accessibility
      # ================================================================= */
   
-  /* Hide content from screens but not screenreaders */
+  /*スクリーンからコンテンツを隠すが、スクリーンリーダーからは隠さない */
   @media screen {
     [hidden~="screen"] {
       display: inherit;
@@ -300,17 +300,17 @@
     }
   }
   
-  /* Specify the progress cursor of updating elements */
+  /* 要素更新の進捗カーソルを指定する */
   [aria-busy="true"] {
     cursor: progress;
   }
   
-  /* Specify the pointer cursor of trigger elements */
+  /* トリガー要素のポインターカーソルを指定する */
   [aria-controls] {
     cursor: pointer;
   }
   
-  /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+  /* 無効、編集不可、その他操作不能な要素のスタイルなしカーソルを指定する。 */
   [aria-disabled] {
     cursor: default;
   }
@@ -319,16 +319,16 @@
      # Selection
      # ================================================================= */
   
-  /* Specify text selection background color and omit drop shadow */
+  /* テキスト選択の背景色を指定し、ドロップシャドウを省く */
   
   ::-moz-selection {
-    background-color: #b3d4fc; /* Required when declaring ::selection */
+    background-color: #b3d4fc; /* :selectionを宣言する際に必要 */
     color: #000;
     text-shadow: none;
   }
   
   ::selection {
-    background-color: #b3d4fc; /* Required when declaring ::selection */
+    background-color: #b3d4fc; /* :selectionを宣言する際に必要 */
     color: #000;
     text-shadow: none;
   }
