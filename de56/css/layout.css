@@ -180,6 +180,9 @@ h1,
 #g-nav-list li:nth-of-type(10){
     animation-delay: 1.9s;
 }
+#g-nav-list li:nth-of-type(11){
+    animation-delay: 2.1s;
+}
 /* lead */
 
 #lead{
