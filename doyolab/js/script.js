@@ -7,7 +7,7 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC逕ｨ縺ｮ逕ｻ蜒�
-				{ src: './img/bg_01.jpg'},
+				{ src: 'https://1drv.ms/i/s!Am04C9A4pgoWgYd4ZgLJNDbS6KGBrA?e=7WZ1WN'},
 				{ src: './img/bg_02.jpg'},
 				{ src: './img/bg_03.jpg'}
 			];
