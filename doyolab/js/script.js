@@ -7,7 +7,7 @@
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 		if (windowwidth > 768){
 			var responsiveImage = [//PC逕ｨ縺ｮ逕ｻ蜒�
-				{ src: 'https://1drv.ms/i/s!Am04C9A4pgoWgYd4ZgLJNDbS6KGBrA?e=7WZ1WN'},
+				{ src: 'https://digifab.or.jp/wp/wp-content/uploads/2022/02/IMG_4076-2-edited-scaled.jpg'},
 				{ src: './img/bg_02.jpg'},
 				{ src: './img/bg_03.jpg'}
 			];
