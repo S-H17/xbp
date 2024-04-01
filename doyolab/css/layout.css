@@ -42,7 +42,7 @@ a:active{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    color: #fff;
+    color: #fbff00; /* 文字の色 */
     text-align: center;
 }
 
@@ -53,7 +53,7 @@ h2{
     font-size:6vw;
     line-height: 1;
     letter-spacing: 0.05em;
-    color: #fff;
+    color: #fbff00; /* 文字の色  */
 }
 
 .heading-block p{
@@ -75,7 +75,7 @@ h2{
 }
 
 #box3 h2{
-    color: #925410;
+    color: #fbff00; /* 文字の色  */
 }
 
 
